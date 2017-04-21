@@ -4,6 +4,7 @@ const hostname = '0.0.0.0';
 const port = 80;
 
 const server = http.createServer((req, res) => {
+  console.log('log test');
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World Production\n');
