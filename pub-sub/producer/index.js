@@ -19,6 +19,8 @@ function publishMessage (topicName, data) {
       const messageIds = results[0];
       console.log(`Message ${messageIds[0]} published.`);
       return messageIds;
+    }).catch((a) => {
+        console.log(a);
     });
 }
 
