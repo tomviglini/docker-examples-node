@@ -1,18 +1,20 @@
 'use strict';
 
-//const PubSub = require(`@google-cloud/pubsub`);
+const PubSub = require(`@google-cloud/pubsub`);
 
 
-var pubsub = require('@google-cloud/pubsub')({
+/*var pubsub = require('@google-cloud/pubsub')({
   projectId: 'viglini-1',
 //  keyFilename: '/path/to/keyfile.json'
-});
+});*/
 
 const express = require('express');
 const app = express();
 
 function publishMessage (topicName, data) {
-  //const pubsub = PubSub();
+  const pubsub = PubSub({
+    projectId: 'viglini-1'
+  });
   const topic = pubsub.topic(topicName);
   return topic.publish(data)
     .then((results) => {
