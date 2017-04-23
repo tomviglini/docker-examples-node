@@ -30,4 +30,8 @@ app.get('/pub-sub/producer', function (req, res) {
   res.send('Hello from producer')
 });
 
+app.get('*', function (req, res) {
+  res.send('Hello World!')
+});
+
 app.listen(80);
