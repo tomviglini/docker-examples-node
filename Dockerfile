@@ -10,10 +10,10 @@ ADD ./pub-sub/consumer/package.json ./pub-sub/consumer/package.json
 ADD ./pub-sub/producer/package.json ./pub-sub/producer/package.json
 
 WORKDIR /code/pub-sub/consumer
-RUN yarn install
+RUN yarn install --production
 
 WORKDIR /code/pub-sub/producer
-RUN yarn install
+RUN yarn install --production
 
 WORKDIR /code
 ADD . .
