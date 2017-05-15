@@ -1,0 +1,16 @@
+{
+	"name": "docker-examples-node",
+	"version": "1.0.0",
+	"description": "Docker Examples Node",
+	"main": "index.js",
+	"dependencies": {
+		"express": "^4.15.2",
+		"request": "^2.81.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Tomas Viglini",
+	"license": "ISC"
+}
